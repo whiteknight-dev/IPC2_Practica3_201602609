@@ -1,0 +1,41 @@
+{% load static %} {% block navbar %}
+<aside class="flex flex-col justify-around w-1/4 bg-orange-400">
+  <div class="flex justify-center w-full h-52">
+    <img
+      class="w-56"
+      src="{% static 'logo.svg' %}"
+      alt="Logo principal de la página"
+    />
+  </div>
+  <ul>
+    <li class="pl-2.5 mb-6 text-lg">
+      <a class="flex items-center" href="{%url 'borrar'%}"
+        ><span class="material-symbols-outlined inline-block mr-3.5">
+          ink_eraser </span
+        >Borrar Datos</a
+      >
+    </li>
+    <li class="pl-2.5 mb-6 text-lg">
+      <a class="flex items-center" href="{%url 'cargar'%}"
+        ><span class="material-symbols-outlined inline-block mr-3.5">
+          upload_file </span
+        >Cargar XML</a
+      >
+    </li>
+    <li class="pl-2.5 mb-6 text-lg">
+      <a class="flex items-center" href="{%url 'procesamiento'%}"
+        ><span class="material-symbols-outlined inline-block mr-3.5">
+          description </span
+        >Procesar Datos</a
+      >
+    </li>
+    <li class="pl-2.5 text-lg">
+      <a class="flex items-center" href="{%url 'datos'%}"
+        ><span class="material-symbols-outlined inline-block mr-3.5">
+          person </span
+        >Datos del Estudiante</a
+      >
+    </li>
+  </ul>
+</aside>
+{% endblock %}
